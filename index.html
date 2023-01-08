@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            cube
+        </title>
+        <style>
+        .scene{
+            perspective:600px;
+            
+            margin:180px 80px;
+            width:200px;
+            height:200px;
+        }
+            .cube div{
+                width:200px;
+                height:200px;
+                border:1px solid red;
+                text-align:center;
+                box-sizing:border-box;
+                padding-top:80px;
+                position:absolute;
+                font-size:30px;
+            }
+            .cube{
+                transform-style:preserve-3D;
+                position:relative;
+                transform:translateZ(-100px) rotateX(40deg ) rotateY(40deg);
+            }
+            .top{
+                transform:rotateX(90deg) 
+                translateZ(100px);
+                background-color:#797919;
+            }
+            .bottom{
+                transform:rotateX(-90deg) 
+                translateZ(100px);
+                background-color:#819380;
+            }
+            .left{
+                transform:rotateY(-90deg) 
+                translateZ(100px);
+                background-color:#337799;
+            }
+            .right{
+                transform:rotateY(90deg) 
+                translateZ(100px);
+                background-color:#940829;
+            }
+            .back{
+                transform:rotateY(180deg) 
+                translateZ(100px);
+                background-color:#728287;
+            }
+            .front{
+                transform:rotateY(0deg) 
+                translateZ(100px);
+                background-color:rgba(0,120,220,0.4);
+            }
+
+        </style>
+        <meta name="viewport" content="width=device-width"/>
+    </head>
+    <body>
+        <div class="scene">
+            <div class="cube">
+                <div class="top">top</div>
+                <div class="bottom">bottom</div>
+                <div class="left">left</div>
+                <div class="right">right</div>
+                <div class="back">back</div>
+                <div class="front">front</div>
+            </div>
+        </div><br/><br/>
+        
+        
+    </body>
+</html>
